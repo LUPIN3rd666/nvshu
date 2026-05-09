@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文创产品 - 执笔抒绪</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#EFE9DF', 
+                        ink: '#2F2A26',   
+                        blush: '#D28A82', 
+                        sage: '#839081',  
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['"Songti SC"', '"Noto Serif SC"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg-custom {
+            background-image: url('./images/hero-bg.png');
+            background-position: center;
+        }
+        @media (min-width: 768px) {
+            .hero-bg-custom {
+                background-position: right center; 
+            }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 40px -10px rgba(47, 42, 38, 0.05);
+        }
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-character;
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-blush selection:text-white">
+
+    <div class="fixed inset-0 -z-10 hero-bg-custom bg-cover bg-no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-r from-paper/85 via-paper/40 to-transparent md:from-paper/95 md:via-paper/30"></div>
+    </div>
+
+    <nav class="absolute top-0 w-full z-50 py-4 px-10 md:px-20 flex justify-between items-center">
+        <a href="index.html" class="block">
+            <img src="./images/taxu.jpg" alt="她绪 Logo" class="h-28 mix-blend-multiply transition-opacity hover:opacity-80">
+        </a>
+        
+        <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm tracking-widest font-light text-ink/90 items-center">
+            <a href="index.html" class="hover:text-blush transition-colors duration-300">首页</a>
+            <a href="footprints.html" class="hover:text-blush transition-colors duration-300">实践足迹</a>
+            <a href="products.html" class="text-blush font-medium border-b border-blush/30">文创产品</a>
+            <a href="courses.html" class="hover:text-blush transition-colors duration-300">女书疗愈课程</a>
+            <a href="treehole.html" class="hover:text-blush transition-colors duration-300">女书树洞 / AI 伴疗</a>
+            <a href="about.html" class="hover:text-blush transition-colors duration-300">关于我们</a>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-56 pb-24 px-10 md:px-20 max-w-[1400px] mx-auto">
+        <header class="mb-24 text-center">
+            <h1 class="text-5xl md:text-6xl font-serif tracking-[0.3em] mb-8 text-ink drop-shadow-sm">
+                女书文创：指尖上的温度
+            </h1>
+            <p class="text-sm md:text-base font-light tracking-[0.4em] opacity-60 max-w-3xl mx-auto leading-loose">
+                将非遗女书的柔美笔触，转化为现代疗愈的具象载体。<br>
+                在每一次触摸与呼吸间，寻回内在的安宁。
+            </p>
+        </header>
+
+        <div class="space-y-32">
+            
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 group overflow-hidden rounded-[3rem] aspect-[16/10] bg-white/20">
+                    <img src="./images/wen1.png" alt="静心香囊" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                </div>
+                <div class="lg:col-span-5 lg:pl-8">
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] space-y-8">
+                        <div>
+                            <span class="text-blush text-xs tracking-[0.3em] uppercase mb-4 block">Incense Collection</span>
+                            <h2 class="text-3xl font-serif tracking-widest">静心香囊：寻味非遗</h2>
+                        </div>
+                        <div class="text-sm font-light leading-relaxed tracking-widest opacity-80 text-justify-custom">
+                            <p class="mb-4">每一枚香囊均由非遗传承人手工绣制。<b>“随缘”款</b>以褐底蓝花呈现随遇而安的淡然；<b>“静心”款</b>则取竹林之意象，传达禅意空灵的东方美学 [cite: 631]。</p>
+                            <p>我们注入独家药草配方：包含<b>酸枣仁与薰衣草</b>的助眠方，以及由<b>玫瑰与佛手</b>调和的解郁方，以气味疏导心绪 [cite: 631]。</p>
+                        </div>
+                        <a href="#" class="inline-flex items-center space-x-4 group">
+                            <span class="text-xs tracking-[0.2em] font-medium border-b border-ink/20 pb-1 group-hover:border-blush transition-colors">了解详情</span>
+                            <svg class="w-4 h-4 text-blush transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="1.5"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-2 lg:order-1 lg:pr-8">
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] space-y-8">
+                        <div>
+                            <span class="text-blush text-xs tracking-[0.3em] uppercase mb-4 block">Spirit Accessories</span>
+                            <h2 class="text-3xl font-serif tracking-widest">灵语配饰：触手可及</h2>
+                        </div>
+                        <div class="text-sm font-light leading-relaxed tracking-widest opacity-80 text-justify-custom">
+                            <p class="mb-4">选用天然<b>沉香木、菩提子与黑曜石</b>等温润材质，复刻具有吉祥寓意的女书字符 [cite: 639]。</p>
+                            <p>这不仅是腕间的装饰，更是“触手可及”的静心神器。在指尖盘捻间，让这种跨越百年的女性祝福化为对抗浮躁的内在力量 [cite: 639]。</p>
+                        </div>
+                        <a href="#" class="inline-flex items-center space-x-4 group">
+                            <span class="text-xs tracking-[0.2em] font-medium border-b border-ink/20 pb-1 group-hover:border-blush transition-colors">定制方案</span>
+                            <svg class="w-4 h-4 text-blush transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="1.5"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 order-1 lg:order-2 group overflow-hidden rounded-[3rem] aspect-[16/10] bg-white/20">
+                    <img src="./images/wen2.png" alt="灵语配饰" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 group overflow-hidden rounded-[3rem] aspect-[16/10] bg-white/20">
+                    <img src="./images/wen3.png" alt="解压文创" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                </div>
+                <div class="lg:col-span-5 lg:pl-8">
+                    <div class="glass-card p-10 md:p-14 rounded-[3rem] space-y-8">
+                        <div>
+                            <span class="text-blush text-xs tracking-[0.3em] uppercase mb-4 block">Stress Relief</span>
+                            <h2 class="text-3xl font-serif tracking-widest">解压捏捏：情绪出口</h2>
+                        </div>
+                        <div class="text-sm font-light leading-relaxed tracking-widest opacity-80 text-justify-custom">
+                            <p class="mb-4">灵感源于女书文化中的温婉女性。<b>“自在”款</b>采用粉色旗袍造型，尽显休憩时的松弛感；<b>“和气”款</b>则为蓝色旗袍，双目轻闭，尽显宁静 [cite: 635]。</p>
+                            <p>采用高品质环保材料，提供极其柔软且带回弹的物理释放感。让焦虑在一次次按压中消散，实现健康的心理宣泄 [cite: 635]。</p>
+                        </div>
+                        <a href="#" class="inline-flex items-center space-x-4 group">
+                            <span class="text-xs tracking-[0.2em] font-medium border-b border-ink/20 pb-1 group-hover:border-blush transition-colors">了解详情</span>
+                            <svg class="w-4 h-4 text-blush transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-width="1.5"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="mt-40 mb-12">
+            <div class="glass-card p-12 md:p-20 rounded-[4rem] text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blush/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <h3 class="text-2xl md:text-3xl font-serif tracking-[0.25em] mb-8">普惠与尊享的平衡</h3>
+                    <div class="h-[1px] w-24 bg-blush/30 mx-auto mb-10"></div>
+                    <p class="text-sm font-light leading-[2.2] tracking-[0.2em] opacity-70 mb-12">
+                        全线产品定价区间为 <span class="text-ink font-medium">20 - 200 元</span> [cite: 376]。<br>
+                        我们支持深度<b>个性化定制服务</b>（如专属女书刻字、药草比例调配）。<br>
+                        定制产品将根据复杂程度享受 <span class="text-blush font-medium">30% - 40% 的品牌溢价</span>，同时欢迎企业级大宗采购与 CSR 项目合作 [cite: 376, 380]。
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8">
+                        <button class="px-12 py-4 bg-blush text-white rounded-full text-xs tracking-[0.3em] hover:bg-[#C27971] transition-all shadow-xl shadow-blush/20">联系商业合作</button>
+                        <button class="px-12 py-4 border border-ink/10 rounded-full text-xs tracking-[0.3em] hover:bg-white/40 transition-all">下载产品手册</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-ink text-paper pt-24 pb-12 px-10 md:px-20 mt-auto relative z-10">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+            <div class="md:col-span-2 space-y-8">
+                <div class="flex items-center space-x-4">
+                    <img src="./images/hong.jpg" alt="彤管芳遗" class="w-16 h-16 rounded-full object-cover border border-paper/20">
+                    <div class="text-3xl font-serif tracking-widest text-paper">她绪</div>
+                </div>
+                <p class="text-sm font-light leading-loose tracking-widest opacity-60 max-w-sm">
+                    执笔抒绪，她字抚心。<br>我们致力于通过非遗女书文化的创造性转化，为全球女性提供深度的心理疗愈支持与艺术体验 [cite: 6, 647]。
+                </p>
+            </div>
+            <div>
+                <h4 class="font-serif text-lg tracking-widest mb-8 border-b border-paper/10 pb-2 inline-block">导航</h4>
+                <ul class="space-y-4 text-sm font-light tracking-widest opacity-60">
+                    <li><a href="index.html" class="hover:text-blush transition-colors">首页入口</a></li>
+                    <li><a href="footprints.html" class="hover:text-blush transition-colors">调研足迹</a></li>
+                    <li><a href="products.html" class="text-blush">文创产品</a></li>
+                    <li><a href="courses.html" class="hover:text-blush transition-colors">疗愈矩阵</a></li>
+                    <li><a href="about.html" class="hover:text-blush transition-colors">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+                <h4 class="font-serif text-lg tracking-widest mb-8">关注我们</h4>
+                <div class="w-32 h-32 bg-paper/5 border border-paper/10 rounded-2xl flex items-center justify-center relative overflow-hidden group">
+                    <div class="absolute inset-2 border border-dashed border-paper/20 rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm13-2h-2v2h-2v2h2v2h2v-2h2v-2h-2v-2zm-2 4h-2v2h2v-2z"/></svg>
+                    </div>
+                </div>
+                <p class="mt-4 text-[10px] font-light tracking-widest opacity-40 uppercase">WeChat Official Account</p>
+            </div>
+        </div>
+        <div class="max-w-[1400px] mx-auto pt-12 border-t border-paper/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] font-light tracking-[0.2em] opacity-30">
+            <p>© 2026 “她绪”女书心理疗愈工作坊 版权所有 [cite: 1]</p>
+            <div class="flex space-x-8">
+                <span>备案号：京ICP备2025XXXX号</span>
+                <a href="#" class="hover:text-paper transition-colors">隐私权政策</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

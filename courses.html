@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>女书疗愈课程 - 执笔抒绪</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#EFE9DF', 
+                        ink: '#2F2A26',   
+                        blush: '#D28A82', 
+                        sage: '#839081',  
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['"Songti SC"', '"Noto Serif SC"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg-custom {
+            background-image: url('./images/hero-bg.png');
+            background-position: center;
+        }
+        @media (min-width: 768px) {
+            .hero-bg-custom {
+                background-position: right center; 
+            }
+        }
+        /* 基础玻璃质感卡片 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 40px -10px rgba(47, 42, 38, 0.08);
+        }
+        /* 高亮/突出显示的玻璃质感卡片 */
+        .glass-card-highlight {
+            background: rgba(255, 255, 255, 0.65);
+            background-image: linear-gradient(to bottom right, rgba(210, 138, 130, 0.15), rgba(255, 255, 255, 0.5));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(210, 138, 130, 0.4);
+            box-shadow: 0 20px 40px -10px rgba(210, 138, 130, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-blush selection:text-white">
+
+    <div class="fixed inset-0 -z-10 hero-bg-custom bg-cover bg-no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-r from-paper/80 via-paper/40 to-transparent md:from-paper/90 md:via-paper/30"></div>
+    </div>
+
+    <nav class="absolute top-0 w-full z-50 py-4 px-10 md:px-20 flex justify-between items-center">
+        <a href="index.html" class="block">
+            <img src="./images/taxu.jpg" alt="她绪 Logo" class="h-28 mix-blend-multiply transition-opacity hover:opacity-80">
+        </a>
+        
+        <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm tracking-widest font-light text-ink/90 items-center">
+            <a href="index.html" class="hover:text-blush transition-colors duration-300">首页</a>
+            <a href="footprints.html" class="hover:text-blush transition-colors duration-300">实践足迹</a>
+            <a href="products.html" class="hover:text-blush transition-colors duration-300">文创产品</a>
+            <a href="courses.html" class="hover:text-blush transition-colors duration-300">女书疗愈课程</a>
+            <a href="treehole.html" class="hover:text-blush transition-colors duration-300">女书树洞 / AI 伴疗</a>
+            <a href="about.html" class="text-blush font-medium border-b border-blush/30">关于我们</a>
+        </div>
+    </nav>
+
+    <section class="pt-36 pb-24 px-6 md:px-10 lg:px-20 max-w-[1400px] mx-auto relative z-10 min-h-screen flex flex-col justify-center">
+        
+        <div class="flex items-center space-x-4 mb-6 justify-center">
+            <span class="block w-12 h-[1px] bg-sage"></span>
+            <span class="text-sage text-sm tracking-[0.2em] font-medium">体系化疗愈矩阵</span>
+            <span class="block w-12 h-[1px] bg-sage"></span>
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight mb-16 text-ink text-center drop-shadow-sm">
+            以字为药，抚平心绪
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 items-center">
+            
+            <div class="glass-card rounded-[2rem] p-8 flex flex-col h-[28rem] hover:-translate-y-2 transition-transform duration-300">
+                <div class="mb-8">
+                    <h3 class="text-xl font-serif tracking-widest text-ink/90 mb-2">基础课程</h3>
+                    <p class="text-xs font-light tracking-wider text-ink/60">文化启蒙与初步体验</p>
+                </div>
+                <div class="mb-8">
+                    <span class="text-4xl font-serif text-ink tracking-widest">免费</span>
+                </div>
+                <ul class="space-y-4 text-sm font-light tracking-widest opacity-85 flex-grow">
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        女书起源溯源
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        基础书写教学
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        女书冥想 (共 8 课时)
+                    </li>
+                </ul>
+                <button class="w-full py-3 mt-6 border border-ink/20 rounded-full text-sm tracking-widest hover:bg-ink/5 transition-colors duration-300">
+                    免费体验
+                </button>
+            </div>
+
+            <div class="glass-card rounded-[2rem] p-8 flex flex-col h-[28rem] hover:-translate-y-2 transition-transform duration-300">
+                <div class="mb-8">
+                    <h3 class="text-xl font-serif tracking-widest text-ink/90 mb-2">进阶课程</h3>
+                    <p class="text-xs font-light tracking-wider text-ink/60">深度干预与技能掌握</p>
+                </div>
+                <div class="mb-8 flex items-baseline">
+                    <span class="text-xl font-medium text-ink mr-1">¥</span>
+                    <span class="text-4xl font-serif text-ink tracking-wider">39.9</span>
+                    <span class="text-sm font-light text-ink/60 ml-1">/ 节</span>
+                </div>
+                <ul class="space-y-4 text-sm font-light tracking-widest opacity-85 flex-grow">
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        情绪管理专项
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        压力缓解实操
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        女性自我成长探索
+                    </li>
+                </ul>
+                <button class="w-full py-3 mt-6 border border-ink/20 rounded-full text-sm tracking-widest hover:bg-ink/5 transition-colors duration-300">
+                    选购课程
+                </button>
+            </div>
+
+            <div class="glass-card rounded-[2rem] p-8 flex flex-col h-[28rem] hover:-translate-y-2 transition-transform duration-300">
+                <div class="mb-8">
+                    <h3 class="text-xl font-serif tracking-widest text-ink/90 mb-2">1v1 轻聊</h3>
+                    <p class="text-xs font-light tracking-wider text-ink/60">私密空间与专属陪伴</p>
+                </div>
+                <div class="mb-8 flex items-baseline">
+                    <span class="text-xl font-medium text-ink mr-1">¥</span>
+                    <span class="text-4xl font-serif text-ink tracking-wider">60</span>
+                    <span class="text-sm font-light text-ink/60 ml-1">/ 小时</span>
+                </div>
+                <ul class="space-y-4 text-sm font-light tracking-widest opacity-85 flex-grow">
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        定制化心理干预
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        实时化情绪疏导
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-4 h-4 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        精准心理支持
+                    </li>
+                </ul>
+                <button class="w-full py-3 mt-6 border border-ink/20 rounded-full text-sm tracking-widest hover:bg-ink/5 transition-colors duration-300">
+                    预约咨询
+                </button>
+            </div>
+
+            <div class="glass-card-highlight rounded-[2rem] p-8 lg:p-10 flex flex-col h-[29rem] lg:h-[30rem] transform lg:scale-105 relative z-20">
+                <div class="absolute -top-4 right-8 bg-blush text-white text-xs tracking-widest py-1.5 px-4 rounded-full shadow-lg shadow-blush/30">
+                    尊享推荐
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-serif tracking-widest text-ink mb-2">会员年费</h3>
+                    <p class="text-xs font-light tracking-wider text-ink/70">全方位疗愈生态体验</p>
+                </div>
+                <div class="mb-8 flex items-baseline">
+                    <span class="text-xl font-medium text-blush mr-1">¥</span>
+                    <span class="text-5xl font-serif text-blush tracking-wider">599</span>
+                    <span class="text-sm font-light text-ink/60 ml-1">/ 年</span>
+                </div>
+                <ul class="space-y-4 text-sm font-medium tracking-widest text-ink/90 flex-grow">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-blush mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        全站疗愈课程免费
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-blush mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        加入高浓度专属社群
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-blush mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                        文创周边专享 8 折
+                    </li>
+                    <li class="flex items-center opacity-80 pt-2 text-xs font-light">
+                        <svg class="w-4 h-4 text-blush mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        包含优先线下沙龙名额
+                    </li>
+                </ul>
+                <button class="w-full py-3.5 mt-6 rounded-full text-white bg-blush hover:bg-[#C27971] shadow-lg shadow-blush/40 transition-all duration-300 hover:-translate-y-1 text-sm tracking-widest font-medium">
+                    立即开通
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

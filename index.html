@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>执笔抒绪 - 女书心理疗愈工作坊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#EFE9DF', /* 提取自画卷底色 */
+                        ink: '#2F2A26',   /* 提取自水墨与发丝 */
+                        blush: '#D28A82', /* 提取自牡丹柔粉 */
+                        sage: '#839081',  /* 提取自枝叶淡绿 */
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['"Songti SC"', '"Noto Serif SC"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 全局背景图控制 */
+        .hero-bg-custom {
+            background-image: url('./images/hero-bg.png');
+            background-position: center;
+        }
+        @media (min-width: 768px) {
+            .hero-bg-custom {
+                background-position: right center; /* 桌面端靠右展示人物主体 */
+            }
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-blush selection:text-white">
+
+    <div class="fixed inset-0 -z-10 hero-bg-custom bg-cover bg-no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-r from-paper/80 via-paper/40 to-transparent md:from-paper/90 md:via-paper/30"></div>
+    </div>
+
+    <nav class="absolute top-0 w-full z-50 py-4 px-10 md:px-20 flex justify-between items-center">
+        <a href="index.html" class="block">
+            <img src="./images/taxu.jpg" alt="她绪 Logo" class="h-28 mix-blend-multiply transition-opacity hover:opacity-80">
+        </a>
+        
+        <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm tracking-widest font-light text-ink/90 items-center">
+            <a href="index.html" class="hover:text-blush transition-colors duration-300">首页</a>
+            <a href="footprints.html" class="hover:text-blush transition-colors duration-300">实践足迹</a>
+            <a href="products.html" class="hover:text-blush transition-colors duration-300">文创产品</a>
+            <a href="courses.html" class="hover:text-blush transition-colors duration-300">女书疗愈课程</a>
+            <a href="treehole.html" class="hover:text-blush transition-colors duration-300">女书树洞 / AI 伴疗</a>
+            <a href="about.html" class="text-blush font-medium border-b border-blush/30">关于我们</a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center overflow-hidden">
+        
+        <div class="relative z-10 px-10 md:pl-64 w-full max-w-7xl mt-12 text-center md:text-left">
+            <h1 class="text-5xl md:text-7xl font-serif text-ink tracking-[0.2em] mb-6 drop-shadow-sm leading-tight">
+                执笔抒绪，<br>她字抚心
+            </h1>
+            <p class="text-lg md:text-xl tracking-[0.15em] mb-14 font-light opacity-90 leading-relaxed mx-auto md:mx-0 max-w-md md:max-w-xl">
+                跨越百年的女性智慧，<br>为你筑起现代心灵的避风港
+            </p>
+            <a href="courses.html" class="inline-flex items-center justify-center px-12 py-4 border border-transparent text-sm md:text-base font-medium rounded-full text-white bg-blush hover:bg-[#C27971] shadow-lg shadow-blush/40 transition-all duration-300 hover:-translate-y-1 tracking-widest">
+                开启疗愈之旅
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-60">
+            <svg class="w-6 h-6 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </header>
+
+</body>
+</html>

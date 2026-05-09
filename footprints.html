@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实践足迹 - 女书心理疗愈工作坊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#EFE9DF', 
+                        ink: '#2F2A26',   
+                        blush: '#D28A82', 
+                        sage: '#839081',  
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['"Songti SC"', '"Noto Serif SC"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg-custom {
+            background-image: url('./images/hero-bg.png');
+            background-position: center;
+        }
+        @media (min-width: 768px) {
+            .hero-bg-custom {
+                background-position: right center; 
+            }
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-blush selection:text-white">
+
+    <div class="fixed inset-0 -z-10 hero-bg-custom bg-cover bg-no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-r from-paper/80 via-paper/40 to-transparent md:from-paper/90 md:via-paper/30"></div>
+    </div>
+
+    <nav class="absolute top-0 w-full z-50 py-4 px-10 md:px-20 flex justify-between items-center">
+        <a href="index.html" class="block">
+            <img src="./images/taxu.jpg" alt="她绪 Logo" class="h-28 mix-blend-multiply transition-opacity hover:opacity-80">
+        </a>
+        
+        <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm tracking-widest font-light text-ink/90 items-center">
+            <a href="index.html" class="hover:text-blush transition-colors duration-300">首页</a>
+            <a href="footprints.html" class="hover:text-blush transition-colors duration-300">实践足迹</a>
+            <a href="products.html" class="hover:text-blush transition-colors duration-300">文创产品</a>
+            <a href="courses.html" class="hover:text-blush transition-colors duration-300">女书疗愈课程</a>
+            <a href="treehole.html" class="hover:text-blush transition-colors duration-300">女书树洞 / AI 伴疗</a>
+            <a href="about.html" class="text-blush font-medium border-b border-blush/30">关于我们</a>
+        </div>
+    </nav>
+
+    <section class="pt-36 pb-24 px-10 md:px-20 max-w-[1400px] mx-auto relative z-10">
+        <div class="flex items-center space-x-4 mb-8 justify-center">
+            <span class="block w-12 h-[1px] bg-sage"></span>
+            <span class="text-sage text-sm tracking-[0.2em] font-medium">实践足迹</span>
+            <span class="block w-12 h-[1px] bg-sage"></span>
+        </div>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight mb-16 text-ink text-center drop-shadow-sm">
+            寻访文化根脉，见证非遗活化
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px] md:auto-rows-[280px]">
+            
+            <div class="group relative overflow-hidden rounded-[2rem] md:col-span-2 md:row-span-2 shadow-md hover:shadow-2xl transition-all duration-500 border border-ink/5">
+                <img src="./images/shijian1.jpg" alt="中国女书村" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 p-8 md:p-10 z-10 w-full">
+                    <span class="inline-block px-4 py-1.5 mb-4 text-xs font-light tracking-widest border rounded-full border-blush/60 text-paper bg-blush/20 backdrop-blur-md">第一站</span>
+                    <h3 class="text-3xl md:text-4xl font-serif text-white tracking-widest mb-4 drop-shadow-md">中国女书村</h3>
+                    <p class="text-white/85 font-light text-sm md:text-base tracking-[0.1em] leading-relaxed max-w-md">
+                        深入江永县浦尾村，探访女书生态博物馆。梳理文化起源，感受“哭嫁歌”与“姐妹书”中蕴藏的情感羁绊与互助力量。
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-[2rem] md:col-span-1 md:row-span-1 shadow-md hover:shadow-2xl transition-all duration-500 border border-ink/5">
+                <img src="./images/shijian5.jpg" alt="蒲丽娟老师工作室" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 p-6 z-10 w-full">
+                    <span class="inline-block px-3 py-1 mb-3 text-[10px] font-light tracking-widest border rounded-full border-sage/60 text-paper bg-sage/20 backdrop-blur-md">第二站</span>
+                    <h3 class="text-xl font-serif text-white tracking-widest mb-2">对话传承人</h3>
+                    <p class="text-white/80 font-light text-xs tracking-wider leading-relaxed">
+                        拜访蒲丽娟老师工作室，对话非遗传承，亲手体验‘细长柔美’的书写风格。
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-[2rem] md:col-span-1 md:row-span-1 shadow-md hover:shadow-2xl transition-all duration-500 border border-ink/5">
+                <img src="./images/shijian4.jpg" alt="勾蓝瑶寨" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 p-6 z-10 w-full">
+                    <span class="inline-block px-3 py-1 mb-3 text-[10px] font-light tracking-widest border rounded-full border-paper/40 text-paper bg-ink/30 backdrop-blur-md">第三站</span>
+                    <h3 class="text-xl font-serif text-white tracking-widest mb-2">勾蓝瑶寨</h3>
+                    <p class="text-white/80 font-light text-xs tracking-wider leading-relaxed">
+                        深入调研文创产品市场化运营，挖掘文化非遗活化过程中的现实痛点。
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-[2rem] md:col-span-1 md:row-span-1 shadow-md hover:shadow-2xl transition-all duration-500 border border-ink/5">
+                <img src="./images/shijian3.jpg" alt="文创转化" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 p-6 z-10 w-full">
+                    <span class="inline-block px-3 py-1 mb-3 text-[10px] font-light tracking-widest border rounded-full border-blush/60 text-paper bg-blush/20 backdrop-blur-md">匠心体验</span>
+                    <h3 class="text-xl font-serif text-white tracking-widest mb-2">执笔落墨</h3>
+                    <p class="text-white/80 font-light text-xs tracking-wider leading-relaxed">
+                        观察手工绣品制作工艺，探索传统女书技艺与现代审美的融合边界。
+                    </p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-[2rem] md:col-span-1 md:row-span-1 shadow-md hover:shadow-2xl transition-all duration-500 border border-ink/5">
+                <img src="./images/shijian2.jpg" alt="寻根回响" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+                <div class="absolute bottom-0 left-0 p-6 z-10 w-full">
+                    <span class="inline-block px-3 py-1 mb-3 text-[10px] font-light tracking-widest border rounded-full border-sage/60 text-paper bg-sage/20 backdrop-blur-md">寻根回响</span>
+                    <h3 class="text-xl font-serif text-white tracking-widest mb-2">倾听诉求</h3>
+                    <p class="text-white/80 font-light text-xs tracking-wider leading-relaxed">
+                        收集社会真实回响，寻找文化保护、心理疗愈与产业发展的共赢路径。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
