@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轻聊沙龙 - 执笔抒绪</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#EFE9DF', 
+                        ink: '#2F2A26',   
+                        blush: '#D28A82', 
+                        sage: '#839081',  
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['"Songti SC"', '"Noto Serif SC"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg-custom {
+            background-image: url('./images/hero-bg.png');
+            background-position: center;
+        }
+        @media (min-width: 768px) {
+            .hero-bg-custom {
+                background-position: right center; 
+            }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 40px -10px rgba(47, 42, 38, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-blush selection:text-white">
+
+    <div class="fixed inset-0 -z-10 hero-bg-custom bg-cover bg-no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-r from-paper/80 via-paper/40 to-transparent md:from-paper/90 md:via-paper/30"></div>
+    </div>
+
+    <nav class="absolute top-0 w-full z-50 py-4 px-10 md:px-20 flex justify-between items-center">
+        <a href="index.html" class="block">
+            <img src="./images/taxu.png" alt="她绪 Logo" class="h-24 mix-blend-multiply transition-opacity hover:opacity-80">
+        </a>
+        
+        <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm tracking-widest font-light text-ink/90 items-center">
+            <a href="index.html" class="hover:text-blush transition-colors duration-300">首页</a>
+            <a href="footprints.html" class="hover:text-blush transition-colors duration-300">实践足迹</a>
+            <a href="products.html" class="hover:text-blush transition-colors duration-300">文创产品</a>
+            <a href="courses.html" class="hover:text-blush transition-colors duration-300">女书疗愈课程</a>
+            <a href="salon.html" class="text-blush font-medium border-b border-blush/30 pb-1">轻聊沙龙</a>
+            <a href="about.html" class="hover:text-blush transition-colors duration-300">关于我们</a>
+        </div>
+    </nav>
+
+    <main class="pt-36 pb-24 px-6 md:px-10 lg:px-20 max-w-[1400px] mx-auto relative z-10 min-h-screen">
+        
+        <div class="mb-16 text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start space-x-4 mb-4">
+                <span class="block w-8 h-[1px] bg-sage"></span>
+                <span class="text-sage text-sm tracking-[0.2em] font-medium">线上情感联结</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-serif leading-tight text-ink drop-shadow-sm mb-4">
+                轻聊沙龙：跨越时空的女性共鸣
+            </h1>
+            <p class="text-sm font-light tracking-widest opacity-70 max-w-2xl mx-auto md:mx-0">
+                以女书为纽带，倾听你的心声。在这里，你不是一座孤岛。
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+            
+            <div class="lg:col-span-4 glass-card rounded-[2rem] p-8 flex flex-col justify-between relative group hover:bg-white/50 transition-colors duration-500">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <h2 class="text-2xl font-serif text-ink tracking-widest">1v1 专属轻聊</h2>
+                        <span class="bg-blush text-white text-xs tracking-wider px-3 py-1 rounded-full shadow-sm">60元 / 小时</span>
+                    </div>
+                    
+                    <p class="text-sm font-light text-ink/80 leading-loose tracking-wider mb-6">
+                        提供私密、实时、精准的情感支持。一次 25 分钟的灵魂停泊，让心绪得以安放。
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8 text-sm font-light text-ink/80 tracking-wider">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path></svg>
+                            <span><strong class="font-medium text-ink">情绪倾诉：</strong>安全的表达空间</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path></svg>
+                            <span><strong class="font-medium text-ink">女书轻引导：</strong>提笔书写“静”字，锚定心神</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-sage mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path></svg>
+                            <span><strong class="font-medium text-ink">音疗体验：</strong>1分钟女书传统歌谣抚慰</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p class="text-xs text-ink/40 tracking-widest mb-4">* 尊享会员享有定期免费轻聊权益</p>
+                    <button class="w-full py-4 rounded-full border border-ink/20 text-ink text-sm tracking-widest hover:bg-blush hover:text-white hover:border-transparent transition-all duration-300">
+                        预约倾诉
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 glass-card rounded-[2rem] p-8 flex flex-col justify-between group hover:bg-white/50 transition-colors duration-500">
+                
+                <div class="mb-8">
+                    <div class="flex justify-between items-center border-b border-ink/10 pb-4 mb-6">
+                        <h2 class="text-2xl font-serif text-ink tracking-widest">畅谈主题沙龙</h2>
+                        <span class="text-xs font-light text-ink/50 tracking-widest">轻疗愈 · 深度交流</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white/40 p-6 rounded-2xl border border-white/60 hover:shadow-lg transition-shadow">
+                            <span class="text-xs font-medium text-blush tracking-widest mb-2 block">主题一</span>
+                            <h3 class="font-serif text-lg text-ink mb-3">女书话自我</h3>
+                            <p class="text-xs font-light text-ink/70 leading-relaxed">
+                                打破自我否定困局。现场交流标签故事，用女书为彼此标注优点，制作专属“自我认知重构卡”。
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/40 p-6 rounded-2xl border border-white/60 hover:shadow-lg transition-shadow">
+                            <span class="text-xs font-medium text-sage tracking-widest mb-2 block">主题二</span>
+                            <h3 class="font-serif text-lg text-ink mb-3">女书解压力</h3>
+                            <p class="text-xs font-light text-ink/70 leading-relaxed">
+                                疏导职场与家庭压力。结合“躯体扫描”技巧触摸减压木雕，集体共创“女书压力互助墙”。
+                            </p>
+                        </div>
+
+                        <div class="bg-white/40 p-6 rounded-2xl border border-white/60 hover:shadow-lg transition-shadow">
+                            <span class="text-xs font-medium text-ink/60 tracking-widest mb-2 block">主题三</span>
+                            <h3 class="font-serif text-lg text-ink mb-3">女书叙关系</h3>
+                            <p class="text-xs font-light text-ink/70 leading-relaxed">
+                                梳理亲密与人际联结。写下给重要的人未说出口的话，在匿名抽取与解读中感受被看见的温暖。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/30 rounded-2xl p-6 border border-white/50 flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <span class="block text-sm font-medium text-ink tracking-widest mb-2">阶梯化定制价格</span>
+                        <div class="flex flex-wrap gap-4 text-xs font-light tracking-wider text-ink/70">
+                            <span class="bg-white/50 px-3 py-1 rounded-full">3-5人小组：<strong class="text-blush">79.9元/人</strong></span>
+                            <span class="bg-white/50 px-3 py-1 rounded-full">5-10人场次：<strong class="text-blush">59.9元/人</strong></span>
+                            <span class="bg-white/50 px-3 py-1 rounded-full">10-20人场次：<strong class="text-blush">39.9元/人</strong></span>
+                        </div>
+                    </div>
+                    <button class="shrink-0 px-8 py-3 bg-ink text-paper text-sm tracking-widest rounded-full hover:bg-blush transition-colors duration-300 shadow-md">
+                        发起 / 拼团
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

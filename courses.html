@@ -14,6 +14,7 @@
                         ink: '#2F2A26',   
                         blush: '#D28A82', 
                         sage: '#839081',  
+                        gold: '#C5A059',
                     },
                     fontFamily: {
                         sans: ['system-ui', '-apple-system', 'sans-serif'],
@@ -45,7 +46,10 @@
             background: rgba(255, 255, 255, 0.5);
             box-shadow: 0 25px 50px -12px rgba(47, 42, 38, 0.1);
         }
-        /* 时间轴虚线定制 */
+        .glass-card-premium {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(210, 138, 130, 0.1));
+            border: 2px solid rgba(197, 160, 89, 0.4); /* 金色边框点缀 */
+        }
         .timeline-line::before {
             content: '';
             position: absolute;
@@ -53,10 +57,9 @@
             bottom: 0;
             left: 1.25rem;
             width: 2px;
-            background: rgba(131, 144, 129, 0.2); /* sage 透明虚线效果 */
+            background: rgba(131, 144, 129, 0.2);
             z-index: 0;
         }
-        /* Tab 切换动画 */
         .tab-content {
             animation: fadeIn 0.8s ease-out forwards;
         }
@@ -72,9 +75,9 @@
         <div class="absolute inset-0 bg-gradient-to-r from-paper/85 via-paper/40 to-transparent md:from-paper/95 md:via-paper/30"></div>
     </div>
 
-     <nav class="absolute top-0 w-full z-50 py-4 px-10 md:px-20 flex justify-between items-center">
+      <nav class="absolute top-0 w-full z-50 py-4 px-10 md:px-20 flex justify-between items-center">
         <a href="index.html" class="block">
-            <img src="./images/taxu.png" alt="她绪 Logo" class="h-28 mix-blend-multiply transition-opacity hover:opacity-80">
+            <img src="./images/taxu.png" alt="她绪 Logo" class="h-24 mix-blend-multiply transition-opacity hover:opacity-80">
         </a>
         
         <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm tracking-widest font-light text-ink/90 items-center">
@@ -82,34 +85,75 @@
             <a href="footprints.html" class="hover:text-blush transition-colors duration-300">实践足迹</a>
             <a href="products.html" class="hover:text-blush transition-colors duration-300">文创产品</a>
             <a href="courses.html" class="hover:text-blush transition-colors duration-300">女书疗愈课程</a>
-            <a href="treehole.html" class="hover:text-blush transition-colors duration-300">轻聊沙龙</a>
-            <a href="about.html" class="text-blush font-medium border-b border-blush/30">关于我们</a>
+            <a href="salon.html" class="text-blush font-medium border-b border-blush/30 pb-1">轻聊沙龙</a>
+            <a href="about.html" class="hover:text-blush transition-colors duration-300">关于我们</a>
         </div>
     </nav>
+
     <main class="relative z-10 pt-56 pb-32 px-6 md:px-10 lg:px-20 max-w-[1400px] mx-auto">
         
-        <header class="text-center mb-16">
+        <header class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif tracking-[0.2em] mb-6 text-ink drop-shadow-sm">
-                女书疗愈课程：从文化认知到心灵赋能
+                女书疗愈课程体系
             </h1>
             <p class="text-sm md:text-base font-light tracking-[0.3em] opacity-60 max-w-2xl mx-auto leading-loose">
-                将非遗的柔美融入现代心理学，构筑双轨制疗愈矩阵。
+                将非遗传承与现代干预深度融合，构建多维度女性心理赋能矩阵。
             </p>
         </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+            <div class="glass-card p-8 rounded-[2.5rem] flex flex-col items-center text-center">
+                <span class="text-sage text-xs tracking-widest mb-4">文化启蒙</span>
+                <h3 class="text-xl font-serif mb-6">基础课程</h3>
+                <div class="text-3xl font-serif text-sage mb-8">免费</div>
+                <p class="text-xs font-light opacity-60 leading-relaxed mb-8 flex-grow">包含 8 课时基础教学<br>掌握起源、文字特点及书写</p>
+                <a href="#tab-basic" class="w-full py-3 bg-sage/10 text-sage rounded-full text-xs tracking-widest hover:bg-sage/20 transition-all">开启体验</a>
+            </div>
+
+            <div class="glass-card p-8 rounded-[2.5rem] flex flex-col items-center text-center">
+                <span class="text-blush text-xs tracking-widest mb-4">深度干预</span>
+                <h3 class="text-xl font-serif mb-6">进阶课程</h3>
+                <div class="text-xl font-serif text-ink mb-2">录播 ¥39.9 / 节</div>
+                <div class="text-xl font-serif text-blush mb-6">直播 ¥69.9 / 节</div>
+                <p class="text-xs font-light opacity-60 leading-relaxed mb-8 flex-grow">60 分钟深度干预课时<br>情绪、压力、成长三大模块</p>
+                <a href="#tab-advanced" class="w-full py-3 bg-blush text-white rounded-full text-xs tracking-widest hover:shadow-lg shadow-blush/20 transition-all">立即选购</a>
+            </div>
+
+            <div class="glass-card p-8 rounded-[2.5rem] flex flex-col items-center text-center">
+                <span class="text-ink/40 text-xs tracking-widest mb-4">个人/团体</span>
+                <h3 class="text-xl font-serif mb-6">定制方案</h3>
+                <div class="text-xl font-serif text-ink mb-8">¥1000 - 6000 / 期</div>
+                <p class="text-xs font-light opacity-60 leading-relaxed mb-8 flex-grow">针对特定需求的一对一<br>或团体长期深度疗愈课程</p>
+                <button class="w-full py-3 border border-ink/10 rounded-full text-xs tracking-widest hover:bg-ink/5 transition-all">垂询定制</button>
+            </div>
+
+            <div class="glass-card glass-card-premium p-8 rounded-[2.5rem] flex flex-col items-center text-center relative overflow-hidden">
+                <div class="absolute top-4 right-4 bg-gold text-white text-[10px] px-3 py-1 rounded-full tracking-widest">PREMIUM</div>
+                <span class="text-gold text-xs tracking-widest mb-4">全方位生态</span>
+                <h3 class="text-xl font-serif mb-6">尊享会员</h3>
+                <div class="text-3xl font-serif text-gold mb-8">¥599 / 年</div>
+                <ul class="text-[11px] font-light text-ink/80 space-y-3 mb-8 text-left w-full pl-2">
+                    <li class="flex items-center"><svg class="w-3 h-3 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> 免费获取全部基础与进阶课程</li>
+                    <li class="flex items-center"><svg class="w-3 h-3 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> 专属社群支持与定期1v1轻聊</li>
+                    <li class="flex items-center"><svg class="w-3 h-3 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> 文创产品享受会员八折优惠</li>
+                    <li class="flex items-center"><svg class="w-3 h-3 text-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg> 优先参与线下沙龙与工作坊</li>
+                </ul>
+                <button class="w-full py-3 bg-gold text-white rounded-full text-xs tracking-widest hover:opacity-90 transition-all shadow-lg shadow-gold/20">加入会员</button>
+            </div>
+        </section>
 
         <div class="flex justify-center mb-16">
             <div class="glass-card flex p-2 rounded-full space-x-2 relative z-20">
                 <button onclick="switchTab('basic')" id="btn-basic" class="px-8 py-3 rounded-full text-sm font-medium tracking-widest transition-all duration-500 bg-white/60 text-blush shadow-sm">
-                    基础课程（公益/文化）
+                    基础大纲
                 </button>
                 <button onclick="switchTab('advanced')" id="btn-advanced" class="px-8 py-3 rounded-full text-sm font-light tracking-widest transition-all duration-500 text-ink/60 hover:text-ink">
-                    进阶课程（深度/疗愈）
+                    进阶大纲
                 </button>
             </div>
         </div>
 
         <div id="tab-basic" class="tab-content block space-y-16">
-            
             <div class="glass-card p-10 md:p-14 rounded-[3rem] hover:scale-[1.01]">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div class="space-y-4">
@@ -139,10 +183,12 @@
             </div>
 
             <div class="glass-card p-10 md:p-16 rounded-[3rem]">
-                <h3 class="text-2xl md:text-3xl font-serif tracking-[0.2em] mb-12 text-center">基础课程大纲</h3>
+                <div class="flex items-center justify-center space-x-4 mb-12">
+                    <h3 class="text-2xl md:text-3xl font-serif tracking-[0.2em]">基础课程详细大纲</h3>
+                    <span class="bg-blush text-white px-4 py-1 rounded-full text-xs tracking-widest">公益免费</span>
+                </div>
                 
                 <div class="relative timeline-line max-w-4xl mx-auto space-y-12">
-                    
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">1</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">初识女书</h4>
@@ -150,7 +196,6 @@
                             详细讲解女书的起源传说、历史发展与独特的细长菱形文字特点。深度剖析女书中所承载的女性文化内涵，涵盖女性之间的情感交流与互助精神。
                         </p>
                     </div>
-
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">2</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">基础书写（一）</h4>
@@ -158,7 +203,6 @@
                             剖析女书基本笔画的构造。手把手教学“点、竖、斜、弧”四种核心笔画的书写方法与发力技巧。
                         </p>
                     </div>
-
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">3</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">基础书写（二）</h4>
@@ -166,7 +210,6 @@
                             进阶至单字结构组合。在笔画基础上，练习并书写简单的女书单字，感受文字特有的柔美韵律。
                         </p>
                     </div>
-
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">4</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">文字解读</h4>
@@ -174,7 +217,6 @@
                             结合封建历史背景与古代女性生活场景，开展常用单字含义解读。深刻探讨文字中所蕴含的“思念、祝福、坚韧”等隐秘情感表达。
                         </p>
                     </div>
-
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">5</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">短句创作</h4>
@@ -182,7 +224,6 @@
                             学习女书简单的句式结构。鼓励学员用已学的女书单字，自主创作简短的句子，安全、隐秘地表达当下的内心感受。
                         </p>
                     </div>
-
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">6</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">女书冥想：与女书共舞的心灵放松</h4>
@@ -190,7 +231,6 @@
                             引入女书冥想概念。以女书文字意象为核心锚点，播放舒缓音乐与女书歌谣，引导学员从头部到脚部逐步放松，建立内心庇护所。
                         </p>
                     </div>
-
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">7</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">作品赏析</h4>
@@ -198,7 +238,6 @@
                             展示《结交书》、《哭嫁歌》等经典女书作品实物影像。分析作品的文字表达与情感传递，探讨流传百年的女性智慧与坚韧精神。
                         </p>
                     </div>
-
                     <div class="relative pl-16 group">
                         <div class="absolute left-0 top-1 w-10 h-10 bg-paper border border-sage/40 rounded-full flex items-center justify-center text-sage font-serif shadow-sm z-10 group-hover:bg-sage group-hover:text-white transition-colors duration-500">8</div>
                         <h4 class="text-xl font-serif tracking-widest text-ink mb-3 group-hover:text-sage transition-colors duration-500">总结梳理</h4>
@@ -211,198 +250,117 @@
 
             <div class="glass-card p-10 md:p-14 rounded-[3rem] mt-16 bg-gradient-to-br from-white/40 to-sage/10 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-sage/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
-                
                 <h3 class="text-2xl font-serif tracking-[0.2em] mb-8 text-ink relative z-10">课程深度解析：第六课《女书冥想》</h3>
-                <p class="text-sm font-light tracking-widest opacity-80 mb-10 relative z-10">
-                    本课时长 60 分钟，不同于传统冥想关注呼吸或空白意象，我们以文字为“情感载体”，通过女书建立“字-身体-情绪”的链接。
-                </p>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-                    <div class="glass-card bg-white/50 p-6 rounded-3xl hover:scale-105 transition-transform">
+                    <div class="glass-card bg-white/50 p-6 rounded-3xl">
                         <span class="text-sage font-serif text-lg block mb-2">10 MIN</span>
                         <h4 class="font-medium tracking-widest text-sm mb-3">开篇引导</h4>
-                        <p class="text-xs font-light opacity-70 leading-loose">问候与状态觉察（5m）。女书冥想理念导入（5m），讲解如何用文字意象锚定注意力、减少杂念。</p>
+                        <p class="text-xs font-light opacity-70 leading-loose">问候与状态觉察。理念导入，讲解如何用文字意象锚定注意力、减少杂念。</p>
                     </div>
-                    <div class="glass-card bg-white/50 p-6 rounded-3xl hover:scale-105 transition-transform border-t-4 border-sage/40">
+                    <div class="glass-card bg-white/50 p-6 rounded-3xl">
                         <span class="text-sage font-serif text-lg block mb-2">15 MIN</span>
                         <h4 class="font-medium tracking-widest text-sm mb-3">文字认知</h4>
-                        <p class="text-xs font-light opacity-70 leading-loose">核心文字解读（12m）：深度解析<b class="text-ink text-sm">“静、宁、悦、安”</b>四个文字形体与意象。<br>自主意象联想（3m）。</p>
+                        <p class="text-xs font-light opacity-70 leading-loose">深度解析“静、宁、悦、安”四个文字形体与意象。自主意象联想。</p>
                     </div>
-                    <div class="glass-card bg-white/50 p-6 rounded-3xl hover:scale-105 transition-transform lg:col-span-1 border-t-4 border-sage/60 shadow-lg shadow-sage/10">
+                    <div class="glass-card bg-white/50 p-6 rounded-3xl">
                         <span class="text-sage font-serif text-lg block mb-2">30 MIN</span>
                         <h4 class="font-medium tracking-widest text-sm mb-3">深度冥想</h4>
-                        <p class="text-xs font-light opacity-70 leading-loose">身体放松铺垫（5m）。<br>分文字递进冥想（20m）：以“静”锚定，以“宁”构建空间，以“悦”唤醒积极，以“安”整合（5m）。</p>
+                        <p class="text-xs font-light opacity-70 leading-loose">分文字递进冥想：以“静”锚定，以“宁”构建空间，以“悦”唤醒，以“安”整合。</p>
                     </div>
-                    <div class="glass-card bg-white/50 p-6 rounded-3xl hover:scale-105 transition-transform">
+                    <div class="glass-card bg-white/50 p-6 rounded-3xl">
                         <span class="text-sage font-serif text-lg block mb-2">5 MIN</span>
-                        <h4 class="font-medium tracking-widest text-sm mb-3">唤醒与沉淀</h4>
-                        <p class="text-xs font-light opacity-70 leading-loose">在女书背景歌谣中，进行渐进式唤醒（3m）。<br>课上自主感悟记录（2m），写下当下的心境。</p>
+                        <h4 class="font-medium tracking-widest text-sm mb-3">唤醒沉淀</h4>
+                        <p class="text-xs font-light opacity-70 leading-loose">在女书歌谣中渐进唤醒。记录自主感悟，写下当下的心境。</p>
                     </div>
-                    <div class="glass-card bg-white/50 p-6 rounded-3xl hover:scale-105 transition-transform">
+                    <div class="glass-card bg-white/50 p-6 rounded-3xl">
                         <span class="text-sage font-serif text-lg block mb-2">2 MIN</span>
                         <h4 class="font-medium tracking-widest text-sm mb-3">课后延伸</h4>
-                        <p class="text-xs font-light opacity-70 leading-loose">展示“日常女书冥想方案”流程图，教授如何将5分钟微冥想融入通勤或睡前场景。</p>
+                        <p class="text-xs font-light opacity-70 leading-loose">展示方案流程图，教授如何将5分钟微冥想融入通勤或睡前场景。</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="tab-advanced" class="tab-content hidden space-y-16">
-            
-            <div class="text-center mb-12">
-                <p class="text-sm font-light tracking-[0.3em] opacity-70 max-w-3xl mx-auto leading-loose bg-blush/5 p-8 rounded-3xl border border-blush/20">
-                    进阶课程专为深度心理干预设计。共三大模块，各含 12 课时体系。我们将手把手教授将女书工具化，彻底解决现代女性面临的情绪、压力与自我价值危机。
-                </p>
+            <div class="flex items-center justify-center space-x-4 mb-12">
+                <h3 class="text-2xl md:text-3xl font-serif tracking-[0.2em]">进阶课程深度大纲</h3>
+                <span class="bg-blush text-white px-4 py-1 rounded-full text-xs tracking-widest">¥39.9 / 节起</span>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-8">
-                
-                <div class="glass-card p-10 rounded-[3rem] hover:scale-[1.02] transition-transform duration-500 relative flex flex-col h-full overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-blush/10 rounded-full blur-2xl -mr-10 -mt-10 z-0"></div>
-                    <div class="relative z-10 flex-grow">
+                <div class="glass-card p-10 rounded-[3rem] flex flex-col h-full overflow-hidden">
+                    <div class="relative flex-grow">
                         <span class="text-blush text-xs tracking-[0.2em] uppercase mb-4 block border-b border-blush/20 pb-2 inline-block">Module A</span>
-                        <h3 class="text-2xl font-serif tracking-widest text-ink mb-4">情绪管理 <span class="text-sm font-light text-ink/50 ml-2">12课时</span></h3>
-                        <p class="text-xs font-medium tracking-widest leading-relaxed text-blush mb-10">
-                            目标：识别情绪触发点，打破情绪失控与自我否定的恶性循环，解决易怒、焦虑、悲伤迁延等高频情绪问题。
-                        </p>
-                        
-                        <ul class="space-y-8">
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 1：情绪地图绘制</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    解读女书“怒”、“忧”、“烦”、“慌”等象形文字的隐喻，帮助建立“字-身体-情绪”关联图谱。赏析女书书法与歌谣，与自身建立深层情感链接。
-                                </p>
-                            </li>
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 2：情绪觉察训练</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    讲解呼吸、语速、身体紧绷度等“情绪萌芽信号”。指导制作实体的“女书情绪觉察卡”（正面简笔画，背面标注信号与女书情绪）。
-                                </p>
-                            </li>
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 3：愤怒情绪重构</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    剖析愤怒的表层表现与深层未被满足的需求。指导创作女书情绪对话信：给愤怒的自己写信表达感受，给理性的自己写信标注需求。
-                                </p>
-                            </li>
+                        <h3 class="text-2xl font-serif tracking-widest text-ink mb-4">情绪管理</h3>
+                        <p class="text-xs font-medium tracking-widest leading-relaxed text-blush mb-10">目标：识别情绪触发点，打破情绪失控恶性循环，解决易怒、焦虑问题。</p>
+                        <ul class="space-y-8 text-xs font-light tracking-wider leading-loose opacity-80">
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 1：情绪地图绘制</b><br>解读女书“怒、忧、烦、慌”文字隐喻，建立“字-身体-情绪”图谱。</li>
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 2：情绪觉察训练</b><br>讲解萌芽信号。指导制作实体“女书情绪觉察卡”。</li>
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 3：愤怒情绪重构</b><br>剖析深层需求。指导创作女书情绪对话信，重构内心平和。</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="glass-card p-10 rounded-[3rem] hover:scale-[1.02] transition-transform duration-500 relative flex flex-col h-full overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-sage/10 rounded-full blur-2xl -mr-10 -mt-10 z-0"></div>
-                    <div class="relative z-10 flex-grow">
+                <div class="glass-card p-10 rounded-[3rem] flex flex-col h-full overflow-hidden">
+                    <div class="relative flex-grow">
                         <span class="text-sage text-xs tracking-[0.2em] uppercase mb-4 block border-b border-sage/20 pb-2 inline-block">Module B</span>
-                        <h3 class="text-2xl font-serif tracking-widest text-ink mb-4">压力缓解 <span class="text-sm font-light text-ink/50 ml-2">12课时</span></h3>
-                        <p class="text-xs font-medium tracking-widest leading-relaxed text-sage mb-10">
-                            目标：识别慢性压力源（如职场PUA、家庭角色冲突），从被动承受转为主动管理，解决失眠、注意力不集中等衍生问题。
-                        </p>
-                        
-                        <ul class="space-y-8">
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 1：压力类型识别</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    详细讲解急性压力（如突发任务）与慢性压力（如长期PUA）的区别，以及可控与不可控压力的边界划定。
-                                </p>
-                            </li>
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 2：压力躯体化识别</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    讲解压力引发的各类身体表现。指导创作“女书压力躯体地图”，在人体轮廓图上精准标注压力淤积部位及对应压力源。
-                                </p>
-                            </li>
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 3：急性压力应对</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    分析急性压力下容易慌乱的特点，强调快速干预原则。开展场景模拟（突发任务/争吵），练习简单、易操作的现场女书减压法。
-                                </p>
-                            </li>
+                        <h3 class="text-2xl font-serif tracking-widest text-ink mb-4">压力缓解</h3>
+                        <p class="text-xs font-medium tracking-widest leading-relaxed text-sage mb-10">目标：识别慢性压力源，从被动承受转为主动管理，解决失眠等问题。</p>
+                        <ul class="space-y-8 text-xs font-light tracking-wider leading-loose opacity-80">
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 1：压力类型识别</b><br>讲解急慢性压力区别，以及可控与不可控压力的边界划定。</li>
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 2：压力躯体化识别</b><br>指导创作“女书压力躯体地图”，精准标注压力淤积部位。</li>
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 3：急性压力应对</b><br>练习简单、易操作的现场女书减压法，快速建立干预防线。</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="glass-card p-10 rounded-[3rem] hover:scale-[1.02] transition-transform duration-500 relative flex flex-col h-full overflow-hidden">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-ink/5 rounded-full blur-2xl -mr-10 -mt-10 z-0"></div>
-                    <div class="relative z-10 flex-grow">
+                <div class="glass-card p-10 rounded-[3rem] flex flex-col h-full overflow-hidden">
+                    <div class="relative flex-grow">
                         <span class="text-ink/60 text-xs tracking-[0.2em] uppercase mb-4 block border-b border-ink/10 pb-2 inline-block">Module C</span>
-                        <h3 class="text-2xl font-serif tracking-widest text-ink mb-4">自我成长 <span class="text-sm font-light text-ink/50 ml-2">12课时</span></h3>
-                        <p class="text-xs font-medium tracking-widest leading-relaxed text-ink/80 mb-10">
-                            目标：打破自我否定、成长迷茫等心理困境，建立内在价值绝对认同，实现从自我怀疑到自我赋能的全面转变。
-                        </p>
-                        
-                        <ul class="space-y-8">
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 1：自我认知唤醒</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    解读女书书信、歌谣中的劝导与勉慰。指导制作“女书自我认知卡”：标注性格、兴趣、能力、经历四维度，用女书文字填涂内在轮廓。
-                                </p>
-                            </li>
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 2：自我否定破解</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    深入解读“否”、“定”、“破”在女书文化中的反向意义。引导学员认知：自我否定不过是一种认知惯性，是完全可以被突破的心理屏障。
-                                </p>
-                            </li>
-                            <li class="bg-white/40 p-5 rounded-2xl border border-white/50">
-                                <h4 class="text-sm font-medium tracking-widest text-ink mb-2">课时 3：优点挖掘深化</h4>
-                                <p class="text-xs font-light tracking-wider leading-loose opacity-80">
-                                    参考女书传统赞歌、颂文结构，用叙事式文字重写自身优点。制作专属“女书优势贴纸”应用于常用物品，强化积极心理暗示。
-                                </p>
-                            </li>
+                        <h3 class="text-2xl font-serif tracking-widest text-ink mb-4">自我成长</h3>
+                        <p class="text-xs font-medium tracking-widest leading-relaxed text-ink/80 mb-10">目标：打破自我否定，建立内在价值绝对认同，实现自我赋能转变。</p>
+                        <ul class="space-y-8 text-xs font-light tracking-wider leading-loose opacity-80">
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 1：自我认知唤醒</b><br>解读女书歌谣中的勉慰。制作标注四维度的“女书自我认知卡”。</li>
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 2：自我否定破解</b><br>深入解读“否、定、破”反向意义。打破认知惯性心理屏障。</li>
+                            <li class="bg-white/40 p-5 rounded-2xl"><b>课时 3：优点挖掘深化</b><br>参考传统颂文结构，写自身赞歌，制作专属“女书优势贴纸”。</li>
                         </ul>
                     </div>
                 </div>
-
             </div>
-
-            <div class="text-center mt-20">
-                <a href="#" class="inline-block px-16 py-5 bg-blush text-white rounded-full text-xs font-medium tracking-[0.3em] hover:bg-[#C27971] transition-all shadow-xl shadow-blush/30 hover:-translate-y-1">
-                    查看完整订阅方案（39.9元/节起）
-                </a>
-            </div>
-
         </div>
 
     </main>
 
     <footer class="bg-ink text-paper pt-24 pb-12 px-10 md:px-20 mt-auto relative z-10">
-        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
-            <div class="md:col-span-2 space-y-8 text-center md:text-left">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 text-center md:text-left">
+            <div class="md:col-span-2 space-y-8">
                 <div class="flex items-center justify-center md:justify-start space-x-4">
                     <img src="./images/hong.jpg" alt="彤管芳遗" class="w-16 h-16 rounded-full object-cover border border-paper/20">
                     <div class="text-3xl font-serif tracking-widest text-paper">她绪</div>
                 </div>
                 <p class="text-sm font-light leading-loose tracking-widest opacity-60 max-w-sm mx-auto md:mx-0">
-                    执笔抒绪，她字抚心。<br>我们致力于通过非遗女书文化的创造性转化，为全球女性提供深度的心理疗愈支持与艺术体验。
+                    执笔抒绪，她字抚心。<br>我们致力于通过非遗女书文化的创造性转化，提供深度的心理疗愈支持。
                 </p>
             </div>
-            <div class="text-center md:text-left">
+            <div>
                 <h4 class="font-serif text-lg tracking-widest mb-8 border-b border-paper/10 pb-2 inline-block">导航</h4>
                 <ul class="space-y-4 text-sm font-light tracking-widest opacity-60">
                     <li><a href="index.html" class="hover:text-blush transition-colors">首页入口</a></li>
                     <li><a href="footprints.html" class="hover:text-blush transition-colors">调研足迹</a></li>
                     <li><a href="products.html" class="hover:text-blush transition-colors">文创产品</a></li>
                     <li><a href="courses.html" class="text-blush">疗愈矩阵</a></li>
-                    <li><a href="treehole.html" class="hover:text-blush transition-colors">女书树洞 / AI 伴疗</a></li>
                     <li><a href="about.html" class="hover:text-blush transition-colors">关于我们</a></li>
                 </ul>
             </div>
             <div class="flex flex-col items-center md:items-end">
                 <h4 class="font-serif text-lg tracking-widest mb-8">关注我们</h4>
-                <div class="w-32 h-32 bg-paper/5 border border-paper/10 rounded-2xl flex items-center justify-center relative overflow-hidden group">
-                    <div class="absolute inset-2 border border-dashed border-paper/20 rounded-xl flex items-center justify-center">
-                        <svg class="w-8 h-8 opacity-20" fill="currentColor" viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm13-2h-2v2h-2v2h2v2h2v-2h2v-2h-2v-2zm-2 4h-2v2h2v-2z"/></svg>
-                    </div>
+                <div class="w-32 h-32 bg-paper/5 border border-paper/10 rounded-2xl flex items-center justify-center opacity-40">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4zm13-2h-2v2h-2v2h2v2h2v-2h2v-2h-2v-2zm-2 4h-2v2h2v-2z"/></svg>
                 </div>
-                <p class="mt-4 text-[10px] font-light tracking-widest opacity-40 uppercase">WeChat Official Account</p>
             </div>
         </div>
-        <div class="max-w-[1400px] mx-auto pt-12 border-t border-paper/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] font-light tracking-[0.2em] opacity-30">
-            <p>© 2026 “她绪”女书心理疗愈工作坊 版权所有</p>
-            <div class="flex space-x-8">
-                <span>备案号：京ICP备2025XXXX号</span>
-                <a href="#" class="hover:text-paper transition-colors">隐私权政策</a>
-            </div>
+        <div class="max-w-[1400px] mx-auto pt-12 border-t border-paper/5 text-center text-[10px] font-light tracking-[0.2em] opacity-30">
+            <p>© 2026 “她绪”女书心理疗愈工作坊 版权所有 | 隐私权政策</p>
         </div>
     </footer>
 
@@ -416,19 +374,15 @@
             if (tab === 'basic') {
                 basicContent.classList.remove('hidden');
                 advancedContent.classList.add('hidden');
-                
                 btnBasic.classList.add('bg-white/60', 'text-blush', 'shadow-sm');
                 btnBasic.classList.remove('text-ink/60');
-                
                 btnAdvanced.classList.remove('bg-white/60', 'text-blush', 'shadow-sm');
                 btnAdvanced.classList.add('text-ink/60');
             } else {
                 advancedContent.classList.remove('hidden');
                 basicContent.classList.add('hidden');
-                
                 btnAdvanced.classList.add('bg-white/60', 'text-blush', 'shadow-sm');
                 btnAdvanced.classList.remove('text-ink/60');
-                
                 btnBasic.classList.remove('bg-white/60', 'text-blush', 'shadow-sm');
                 btnBasic.classList.add('text-ink/60');
             }
